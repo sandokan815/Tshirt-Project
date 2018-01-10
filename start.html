@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en" class="js canvas history localstorage wf-report-n6-active wf-active"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Create Custom T-Shirts and Apparel Online</title>
+  <meta name="viewport" content="width=1000">
+  <meta name="keywords" content="custom t-shirts,tshirt,personalized tee shirts,screen printing,design your own shirt,custom apparel">
+  <meta name="description" content="Create your own custom tshirts, tank tops, hoodies, and other apparel. Design online!">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
+  <link href="assets/css/common.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/studio.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="assets/css/custom.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="assets/css/preloader.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.css" type="text/css" media="screen">
+  <link rel="stylesheet" type="text/css" href="assets/css/palette-color-picker.css">
+
+  <style>
+		/* styles unrelated to zoom */
+		* { border:0; margin:0; padding:0; }
+
+		/* these styles are for the demo, but are not required for the plugin */
+		.zoom {
+			display:inline-block;
+			position: relative;
+		}
+		
+		/* magnifying glass icon */
+		.zoom:after {
+			content:'';
+			display:block; 
+			width:33px; 
+			height:33px; 
+			position:absolute; 
+			top:0;
+			right:0;
+			background:url(icon.png);
+		}
+
+		.zoom img {
+			display: block;
+		}
+
+		.zoom img::selection { background-color: transparent; }
+	</style>
+  <body>
+    <div class="loader-wrapper" id="loader-1" name="preloader" style="display:none; background-color: rgba(0, 0, 0, 0.6);">
+        <div id="loader"></div>
+    </div>
+    <div class="page-wrapper">
+      <div class="page-header">
+      </div>
+      <div id="content" class="page-content clearfix">
+      <div class="Studio">
+          <div class="content">
+          <div class="version" >Ver 0.0271</div>
+            <div class="product">
+              <div class="ProductView">
+                
+                <div class="container loader-wrapper" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                  <div class="kineticjs-content" role="presentation" style="position: relative; display: inline-block; width: 576px; height: 682px;    top: 145px;">
+                    <canvas id="stageBackground" width="520" height="590" style="padding: 0px; margin: 0px; border: 0px; background: transparent; position: absolute; top: 0px; left: 0px; width: 576px; height: 590px;">
+                    </canvas>
+                    <div class="gallery-content">
+                        <img src="assets/images/front.jpg" class="image_1" alt="" />
+                        <img src="assets/images/left.jpg" class="image_2" style="display:none" alt="" />
+                        <img src="assets/images/back.jpg" class="image_3" style="display:none" alt="" />
+                        <img src="assets/images/right.jpg" class="image_4" style="display:none" alt="" />
+                    </div>
+                    <div class="clear"></div>
+                      <div class="thumbnail">
+                          <div class="thumb">
+                              <a href="#" rel="1">
+                                  <img src="assets/images/front.jpg" id="thumb_1" alt="" />
+                              </a>
+                          </div>
+                          <div class="thumb">
+                              <a href="#" rel="2">
+                                  <img src="assets/images/left.jpg" id="thumb_2" alt="" />
+                              </a>
+                          </div>
+                          <div class="thumb">
+                              <a href="#" rel="3">
+                                  <img src="assets/images/back.jpg" id="thumb_3" alt="" />
+                              </a>
+                          </div>
+                          <div class="thumb last">
+                              <a href="#" rel="4">
+                                  <img src="assets/images/right.jpg" id="thumb_4" alt="" />
+                              </a>
+                          </div>
+                      </div>
+                    <div id="RecUpLeft" class ="enable canvas-parent" width="80" height="250" style=" padding: 0px; margin: 0px; background: transparent; position: absolute; top: 180px; left: 180px;">
+                      <canvas id="stageUpLeft" width="80" height="250" >
+                      </canvas>
+                    </div>
+                    <div id="RecUpRight" class ="disable canvas-parent" width="80" height="250" style=" padding: 0px; margin: 0px; background: transparent; position: absolute; top: 180px; left: 285px;">
+                      <canvas id="stageUpRight" width="80" height="250">
+                      </canvas>
+                    </div>
+                    <div id="RecLeft" class="hide canvas-parent" width="100" height="190" style=" padding: 0px; margin: 0px; background: transparent; position: absolute; top: 180px; left: 200px;">
+                      <canvas id="stageLeft" width="100" height="190">
+                      </canvas>
+                    </div>
+                    <div id="RecBack" class ="hide canvas-parent" width="195" height="250" style=" padding: 0px; margin: 0px; background: transparent; position: absolute; top: 180px; left: 205px;">
+                      <canvas id="stageBack" width="195" height="250">
+                      </canvas>
+                    </div>
+                    <div id="RecRight" class="hide canvas-parent" width="100" height="190" style=" padding: 0px; margin: 0px; background: transparent; position: absolute; top: 180px; left: 280px;">
+                      <canvas id="stageRight"  width="100" height="190">
+                      </canvas>
+                    </div>  
+                  </div>
+                  <div class="clear"></div>
+                <div class="sub-section text-size product_size" id="product_size">
+                    <label class="edit-icon text-size">Size</label>
+                    <input id="Selectsize" name="product-Size" class="sizeInput product-Size-input" type="range" min="0.1" max="1" step="0.00001" pattern="[0-9]*" value="1">
+                    <input type="number" name="product-SizeNum" class="sizeBox product-SizeNum" min="0.1" max="1" step="0.001" pattern="[0-9]*" value="1">
+                  </div>
+                </div>
+                <ul class="controls">
+                  <li><a href="#" class="rotateButton" style="display:none">view left</a></li>
+                  <li><a href="#" class="zoomButton">zoom</a></li>
+                  <li><a href="#" class="templatesButton">design ideas</a></li>
+                  <li id="|ShareBar" class="ShareBar shareButton">
+                    <div><a id="share" href="#" class="share">share</a></div>
+                    <ul class="share-links">
+                      <li class="email"><a href="#">email</a></li>
+                      <li class="twitter"><a href="#">twitter</a></li>
+                      <li class="facebook"><a href="#">facebook</a></li>
+                      <li class="pinterest"><a href="#">pinterest</a></li>
+                    </ul>
+                  </li>
+                </ul>
+
+              </div>
+          </div>
+          <div class="menu">
+            <ul class="MenuBar active">
+              <li class="selected"><a href="#" class="editProduct" >Letter Patch</a></li>
+              <li><a href="#" class="addImage">Image Patch</a></li>
+              <li ><a href="#" class="addText" >Add New Text</a></li>
+              <li><a href="#" class="saveDesign">Save/Load</a></li>
+              <li class="buy"><a href="#" class="buyLink">Price Calculate</a></li>
+            </ul>
+          </div>
+          <div class="panes">
+          <div class="Pane DesignCanvas"  >
+             <canvas id="stageDesign" width="572" height="330" style="padding: 0px; margin: 0px; border: 1px solid; background: transparent; position: absolute; top: 0px; left: 0px;">
+              </canvas>
+          </div>
+          <ul class="list-unstyled collapse-list">
+            <li>
+            <a href="#" class="Letter-collapse collapse active-patch"><i class="fa fa-header"></i>Add letter<span class="fa arrow" style="display:none"></span></a>
+                <div class="Pane LetterPatch" >
+              <div class="container">
+              <div class="LetterPatch-letter">
+              <div><label>Letter 1 </label><input type="text" name="letter_text1" class="letter_text1" maxlength='1'></div>
+                <div><label>Letter 2 </label><input type="text" name="letter_text2" class="letter_text2" maxlength='1'></div>
+                
+               <div> <label>Letter 3 </label><input type="text" name="letter_text3" class="letter_text3" maxlength='1'></div>
+                
+              </div>
+            <div class="letter-style changestyle" >
+            <div class="section color inline">
+                  <label class="edit-icon color block">Color</label>
+                  <input type="text" class="colorAnchor colorBox letter-color colorpicker letter-style-component" name="fill" id="FontColor" >
+                </div>
+                <div class="section font inline" >
+                  <label class="edit-icon font block">Font</label>
+                  <select id="SelectFont" class="fontAnchor letter-style-component letter-font-family" name="fontFamily">
+                    <option>Georgia</option>
+                    <option>Palatino Linotype</option>
+                    <option>Book Antiqua</option>
+                    <option>Times New Roman</option>
+                    <option>Arial</option>
+                    <option>Helvetica</option>
+                    <option>Arial Black</option>
+                    <option>Impact</option>
+                    <option>Lucida Sans Unicode</option>
+                    <option>Tahoma</option>
+                    <option>Verdana</option>
+                    <option>Courier New</option>
+                    <option>Lucida Console</option>
+                  </select>
+                </div>
+                
+                <div class="section inline letter-border">
+                  <label class="edit-icon block">Borders</label>
+                    <select name="borderStyle" style="width:70px" class="letter-borderstyle letter-style-component ">
+                      <option>none</option>
+                      <option>solid</option>
+                      <option>dotted</option>
+                    </select>
+                    <input type="text" name="borderColor" style="width:25px" class="colorpicker letter-style-component">
+                    <select name="borderWidth" style="width:55px" class="letter-boderwidth letter-style-component">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                      <option>6</option>
+                      <option>8</option>
+                      <option>10</option>
+                      <option>14</option>
+                      <option>18</option>
+                      <option>24</option>
+                      <option>30</option>
+                      <option>40</option>
+                      <option>60</option>
+                    </select>
+                </div>
+                <div class="section inline letter-innerborder">
+                  <label class="edit-icon block">Inner Borders</label>
+                  <select name="innerBorderStyle" style="width:70px" class="letter-innerborderstyle letter-style-component">
+                      <option>none</option>
+                      <option>solid</option>
+                      <option>dotted</option>
+                  </select>
+                  <input type="text" name="innerBorderColor" style="width:25px" class="colorpicker letter-style-component">
+                  <select name="innerBorderWidth" style="width:55px" class="letter-innerborderwidth letter-style-component">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                      <option>6</option>
+                      <option>8</option>
+                      <option>10</option>
+                      <option>14</option>
+                      <option>18</option>
+                      <option>24</option>
+                      <option>30</option>
+                      <option>40</option>
+                      <option>60</option>
+                  </select> 
+                </div>
+                </div>
+                  <div class="patch-button">
+                    <a id = "patchadd" class="btn patchBtn patch-add-btn">Add Patch</a>
+                    <a id = "patchdel" class="btn patchBtn patch-delete-btn">Delete Patch</a>
+                    <a id = "patchsave" class="btn patchBtn patch-save-btn" style="width: 18%; font-size: 12px; font-weight: bold;">Save Pacth</a>
+                    <a id = "patchreset"  class="btn patchBtn patch-reset-btn">Reset</a>
+                  </div>
+                   <div class="add-patch-btn-position"><button id = "patchleftadd" class="btn" style="padding: 12px 17px;border-bottom-right-radius: 0px;">Left</button><button id = "patchrightadd" class="btn" style="padding: 12px 17px;border-bottom-left-radius: 0px;">right</button></div>
+              </div>
+            </div>
+            </li>
+            <li>
+            <div class="menu">
+              <ul class="MenuBar active"  id = "letter_tab">
+                <li id = "letter_text_panel" class="letter_menu" style="border-top-left-radius: 5px;">
+                    <a class="AddText-collapse collapse" style="margin-left: 3px;" >
+                        <i class="fa fa-text-width">
+                        </i>Add New text
+                    </a> 
+                </li>
+                <li id = "letter_image_panel" class="letter_menu" >
+                    <a class="AddImage-collapse collapse" style="margin-left: 3px; border-left: 0px"><i class="fa fa-image"></i>Add image</a>
+                </li>
+              </ul>
+            </div>
+            <div class="letter_panel">
+              <div class="Pane AddTextPane"  style="display:none">
+                  <a href="#" class="close-icon"></a>
+                  <h2>Enter Text Below</h2>
+                  <textarea id="enteredText" name="addText" class="text" rows="4" placeholder=""></textarea>
+                  <!-- <input type="text" name="addText" id="enteredText" /> -->
+                  <button id="btnAddText" class="addText btn" type="submit">Add New Text</button></div>
+                  <div class="add-text-btn-position" style="display: none;"><button id = "textleftadd" class="btn" style="padding: 12px 15px;border-bottom-right-radius: 0px;">Left</button><button id = "textrightadd" class="btn" style="padding: 12px 15px;border-bottom-left-radius: 0px;">right</button></div>
+              <div class="Pane AddImagePane" style="display:none">
+                  <a href="#" class="close-icon"></a>
+                  <div class="intro">
+                    <!-- <h1>Add An Image To Your Design</h1>
+                    <p>Browse our clip art catalog or upload your own.</p> -->
+                    <ul class="add-image-nav">
+                        <li>
+                            <a class="clipart" href="#">
+                                <div><h1>Clip Art</h1><span>View our clip art catalog</span></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="upload" href="#">
+                                <div><h1>Upload Images</h1><span>Upload your own images</span></div>
+                            </a>
+                        </li>
+                          <input id="file" type="file" class="file" accept="image/*" size="200MB">
+  
+                        <li>
+                            <a class="myimages" href="#openModal">
+                                <div><h1>My Images</h1><span>Choose from your saved images</span></div>
+                            </a>
+                        </li>
+                    </ul>
+                  </div>
+                  <div class="main">
+                    <div class="buttons">
+                      <a class="clipArtCatalog button" href="#">Clip Art Catalog</a>
+                      <a class="uploadImage button" href="#">Upload Image</a>
+                      <a class="myImages button" href="#">My Images</a>
+                    </div>
+                    <div class="container"></div>
+                  </div>
+                </div>
+
+                <div class="Pane EditTextPane workstaion_pane changestyle" style="display:none">
+                  <div class="EditPaneGlass"></div>
+                    <div class="container edit_text_panel">
+                      <div class="section text">
+                        <textarea id="txtDel" name="text" class="editor" ></textarea>
+                        <button id="deleteText" class="addText btn">Delete text</button>
+                      </div>
+                      <div class="section color inline editpanepicker">
+                        <label class="edit-icon color block">Color</label>
+                        <input type="text" class="colorAnchor colorBox colorpicker"  name="fill" id="FontColor">
+                      </div>
+                      <div class="section font inline">
+                        <label class="edit-icon font block">Font</label>
+                        <select id="SelectFont" class="fontAnchor edit-font-family" name="fontFamily">
+                          <option>Georgia</option>
+                          <option>Palatino Linotype</option>
+                          <option>Book Antiqua</option>
+                          <option>Times New Roman</option>
+                          <option>Arial</option>
+                          <option>Helvetica</option>
+                          <option>Arial Black</option>
+                          <option>Impact</option>
+                          <option>Lucida Sans Unicode</option>
+                          <option>Tahoma</option>
+                          <option>Verdana</option>
+                          <option>Courier New</option>
+                          <option>Lucida Console</option>
+                        </select>
+                      </div> 
+                      <div class="section inline font_style" style="margin-right: 20px">
+                        <label class="edit-icon color block" >Font style</label>
+                        <label style="width:105px">
+                          <input type="checkbox" name="italic">
+                          Italic
+                        <label>
+                        <label>
+                          <input type="checkbox" name="bold">
+                          Bold
+                        <label>
+                        <label style="width:100px">
+                          <input type="checkbox" name="underline">
+                          Underline
+                        <label>
+                        </label></label></label></label></label></label>
+                      </div>
+                      <div class="section more">
+                        <div class="sub-section text-size">
+                          <label class="edit-icon text-size">Size</label>
+                          <input id="Selectsize" name="fontSize" class="sizeInput" type="range" min="9" max="120" step="0.1" pattern="[0-9]*">
+                          <input type="number" name="fontSizeNum" class="sizeBox" min="9" max="120" step="0.1" pattern="[0-9]*">
+                        </div>
+                      </div>
+                      <div class="section inline border-textedit">
+                        <label class="edit-icon block">Borders</label>
+                        <select name="borderStyle" style="width:70px" class="edittext-borderstyle">
+                          <option>none</option>
+                          <option>solid</option>
+                          <option>dotted</option>
+                        </select>
+                        <input type="text" name="borderColor" style="width:25px" class="colorpicker">
+                        <select name="borderWidth" style="width:55px" class="edittext-borderWidth">
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                          <option>6</option>
+                          <option>8</option>
+                          <option>10</option>
+                          <option>14</option>
+                          <option>18</option>
+                          <option>24</option>
+                          <option>30</option>
+                          <option>40</option>
+                          <option>60</option>
+                        </select>
+                      </div>
+                      <div class="section inline innerborder-textedit">
+                        <label class="edit-icon block">Inner Borders</label>
+                        <select name="innerBorderStyle" style="width:70px" class="edittext-innerBorderStyle">
+                          <option>none</option>
+                          <option>solid</option>
+                          <option>dotted</option>
+                        </select>
+                        <input type="text" name="innerBorderColor" style="width:25px" class="colorpicker">
+                        <select name="innerBorderWidth" style="width:55px" class="edittext-innerBorderWidth">
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                          <option>6</option>
+                          <option>8</option>
+                          <option>10</option>
+                          <option>14</option>
+                          <option>18</option>
+                          <option>24</option>
+                          <option>30</option>
+                          <option>40</option>
+                          <option>60</option>
+                        </select> 
+                      </div>
+                      <div class="section more">
+                        <div class="sub-section spacing">
+                          <label class="edit-icon block">Drawing style</label>
+                            <select name="drawingStyle" style="width: 100px">
+                              <option>Straight</option>
+                              <option>Arch</option>
+                              <option>Bridge text</option>
+                              <option>Vertical</option>
+                            </select>
+                          <input class="trackingInput ranger" name="curveDegree" type="range" min="-360" max="360" step="1" pattern="[0-9]*">
+                          <input class="trackingInput ranger" name="curveBridge" type="range" min="1" max="100" step="1" pattern="[0-9]*" style="display: none;">
+                          <input type="number" class="trackingBox" name="curveValue" min="-360" max="360" step="1" pattern="[0-9]*" style="display: none;">
+                          <input type="number" class="trackingBox" name="brigeValue" min="-30" max="100" step="1" pattern="[0-9]*" style="display: none;">
+                        </div>
+                        <div class="sub-section text-spacing" style="display: none;">
+                          <label class="edit-icon text-spacing">Spacing</label>
+                          <input id="Spacesize" name="spaceSize" class="sizeInput" type="range" min="-10" max="50" step="0.01" pattern="[0-9]*">
+                          <input type="number" name="spaceSizeNum" class="sizeBox" min="-10" max="50" step="0.01" pattern="[0-9]*">
+                        </div>
+                        <div class="sub-section text-lineheight" style="display: none;">
+                          <label class="edit-icon text-lineheight">Spacing</label>
+                          <input id="LineSpacingSize" name="lineSpacingSize" class="sizeInput" type="range" min="0" max="2" step="0.0001" pattern="[0-9]*">
+                          <input type="number" name="lineSpacingSizeNum" class="sizeBox" min="0" max="2" step="0.0001" pattern="[0-9]*">
+                        </div>
+                        <div class="sub-section rotate">
+                          <label class="edit-icon rotation">Rotate</label>
+                          <input class="rotInput" type="range" name = "angle" min="-180" max="180" step="1" pattern="[0-9]*">
+                          <input type="number" class="rotBox" name = "angleNum" min="-180" max="180" step="1" pattern="[0-9]*">
+                        </div>
+                      </div>
+                      <div class="section inline layer-control layer-order">
+                        <div class="layer">
+                          <label class="section-name">Layer Order</label>
+                          <label class="edit-icon layer block">Layer Order</label>
+                          <div style="width:100%;height: 20px ">
+                          <div style="float: left;    line-height: 20px;"><input type="checkbox" name="overlap" id="overlap_checkbox"></div>
+                          <label for="overlap_checkbox" style="cursor: pointer;    margin-left: 7px;">overlap</label></div>
+                          <button type="button" id="Up" name = "BringUp" class="bringForward"><span>bring forward</span></button>
+                          <button type="button" id="Down" name = "BringDown" class="sendBackward"><span>send backward</span></button>
+                        </div>
+                      </div>
+                      <div class="section inline layer-control layer-orders">
+                          <div class="layer" >
+                            <label class="section-name">Layers</label>
+                            <label class="edit-icon layer block">Layers</label>
+                            <ul id="layers" name = "layers" class="ui-sortable" style="overflow-y: auto; height: 88px; padding-top: 0px !important;">
+                            </ul>
+                          </div>
+                      </div>
+                      <div class="section inline layer-control">
+                          <div class="layer">
+                            <label class="section-name">Text align</label>
+                            <label class="edit-icon layer block">Text align</label>
+                            <div style="width:120px">
+                            <select id="SelHAlign" name="textHAlign" style="width:120px">
+                                <option>left</option>
+                                <option>center</option>
+                                <option>right</option>
+                            </select>
+                            <select id="SelVAlign" name="textVAlign" style="width:120px">
+                                <option>top</option>
+                                <option>center</option>
+                                <option>bottom</option>
+                            </select>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="edit-tools">
+                        <div class="label">edit text</div><ul><li>
+                                <a class="text" href="#">text</a>
+                            </li><li>
+                                <a class="font" href="#">font</a>
+                            </li><li>
+                                <a class="color" href="#">color</a>
+                            </li><li>
+                                <a class="stroke-color" href="#">stroke</a>
+                            </li><li>
+                                <a class="shadow-color" href="#">shadow</a>
+                            </li><li>
+                                <a class="arc" href="#">arc</a>
+                            </li><li>
+                                <a class="more" href="#">more</a>
+                            </li><li>
+                                <a class="position" href="#">layer order</a>
+                        </li></ul>
+                    </div>
+                </div>
+                  <div id="imageAttributes" class="Pane EditImagePane workstaion_pane" style="display:none">
+                    <div class="container">
+                      <div class="delete-image">
+                        <div class="transparent_background">
+                          <input type="checkbox" name='removewhitecolor'> Remove white color</input>
+                        </div>
+                      <div class="editimagepane_svg"><label>Edit Color</label>
+                      </div>
+                      <div class="pattern_container"><label>Edit Pattern</label>
+                        </div>
+                      <a class="btn delete_image_btn" >Delete image</a></div>
+                      <div class="section color">
+                        <label class="edit-icon color block">Edit Image</label>
+                      </div>
+                      <div class="section size">
+                        <div class="lock-ratio" ><label>
+                          <input class="constrain" name = "constrain" type="checkbox" ><span></span></label></div>
+                        <div class="size-container">
+                          <div><label class="edit-icon">Width</label>
+                            <input class="widthInput" name = "widthInput" type="range" min="0.1" max="550" step="0.2" pattern="[0-9]*">
+                            <input type="number" name = "widthInputNum" class="widthBox" min="0.1" max="550" step="0.2" pattern="[0-9]*">
+                          </div>
+                          <div><label class="edit-icon">Height</label>
+                            <input class="heightInput" name = "heightInput" type="range" min="0.1" max="300" step="0.2" pattern="[0-9]*">
+                            <input type="number" name = "heightInputNum" class="heightBox" min="0.1" max="300" step="0.2" pattern="[0-9]*"></div>
+                        </div>
+                      </div>
+                      <div class="section rotate">
+                        <label class="section-name">Edit Rotation</label>
+                        <label class="edit-icon rotation">Rotate</label>
+                        <input class="rotInput" type="range" name = "angle" min="-180" max="180" step="1" pattern="[0-9]*">
+                        <input type="number" class="rotBox" name = "angleNum" min="-180" max="180" step="1" pattern="[0-9]*">
+                      </div>
+                      <div class="section position image-control">
+                        <div class="layer">
+                          <label class="section-name">Layer Order</label>
+                          <label class="edit-icon layer block">Layer Order</label>
+                          <button class="bringForward" name = "BringUp"><span>bring forward</span></button>
+                          <button class="sendBackward" name = "BringDown"><span>send backward</span></button>
+                        </div>
+                        <div class="section inline">
+                          <div class="layer">
+                            <label class="section-name">Layers</label>
+                            <label class="edit-icon layer block">Layers</label>
+                            <ul id="layers" name = "layers" class="ui-sortable" style="overflow-y: auto; height: 88px; padding-top: 0px !important;">
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="alignment">
+                            <label class="edit-icon align block">Position</label>
+                            <button name = "alignCenter" class="alignCenter"><span>position center</span></button>
+                            <label class="snap-label"><input class="snap" type="checkbox"> Snap to other objects when dragging</label>
+                        </div>
+                      </div>
+                    </div>           
+                  </div>
+                </div>
+              </li>
+          </ul>
+          <div class="Pane SaveDesignPane" >
+              <a href="#" class="close-icon"></a>
+              <ul class="buttons">
+                <li class="selected"><a href="#" class="save">Save Design</a></li>
+                <li><a href="#" class="load">Load Design</a></li>
+              </ul>
+              <div class="savePane active">
+                <p>Enter a name for your design and then click the save button.</p>
+                <form class="form">
+                  <input type="text" class="designNameInput" maxlength="50" placeholder="Type your design name here">
+                </form>
+                <p><span class="notesToggle">Add notes, PMS color values, or special instructions.</span></p>
+                <textarea class="notesText" rows="4" placeholder="Enter your notes here"></textarea>
+                <a class="saveButton btn btn-med" style="cursor: pointer">Save Design</a>
+                <a id = "saveBuffer" style="margin: 45px;" >When download does not work, Please Click here</a>
+                <div class="message" style="display: none;"></div>
+              </div>
+              <div class="loadPane">
+                <div class="scroller"></div>
+              </div>
+           </div>
+            <div class="Pane EditProductPane" >
+              <a href="#" class="close-icon"></a>
+              <h2><span class="productName">Ultra Cotton Tee</span></h2>
+              <p>by <span class="mfgName">Gildan</span></p>
+              <p><strong>Sizes</strong><span class="sizes">YXS - 3XL</span> <a class="sizeChartLink" href="#" style="visibility: visible;">size chart</a></p>
+              <p><strong>Fabric</strong><span class="fabric">100% preshrunk cotton</span></p>
+              <p><span class="description">Our best-selling and most cost-effective t-shirt. The Gildan Ultra Cotton Tee is a standard crew-neck t-shirt, made of great quality 100% pre-shrunk cotton. It's available in a wide variety of colors so you should be able to find exactly what you're looking for! 
+              *Heather and safety colors are 50/50 cotton/poly blend. Antique colors and Sports Grey are 90/10 blend. Ash Grey is a 99/1 blend.</span></p>
+              <div class="sub-section text-size">
+                <label class="edit-icon text-size">Size</label>
+                <input id="ZoomSize" name="ZoomSize" class="sizeInput" type="range" min="-72" max="72" step="0.1" pattern="[0-9]*">
+              </div>
+            </div>
+              <div class="Pane EditPricePane" style="display:none">
+                  <div class = "menu">
+                    <ul class="MenuBar active"  id = "price_tab">
+                      <li id = "front_price" class="price_menu" style=" border-top-left-radius: 5px;">
+                          <a class="AddText-collapse collapse" style ="" ><i class="fa fa-money" style="margin-right:10px"></i>Front</a> 
+                      </li>
+                      <li id = "left_price" class="price_menu" >
+                          <a href="#" class="AddImage-collapse collapse" style="border-left: 0px"><i class="fa fa-money" style="margin-right:10px"></i>Left</a>
+                      </li>
+                      <li id = "back_price" class="price_menu" >
+                          <a href="#" class="AddImage-collapse collapse" style="border-left: 0px"><i class="fa fa-money" style="margin-right:10px"></i>Back</a>
+                      </li>
+                      <li id = "right_price" class="price_menu" >
+                          <a href="#" class="AddImage-collapse collapse" style="border-left: 0px"><i class="fa fa-money" style="margin-right:10px"></i>Right</a>
+                      </li>
+                    </ul>
+                  </div>  
+                  <div class = "price_panel">
+                    <div style="overflow-y:auto; max-height:920px">
+                      <table class="table">
+                        <thead>
+                            <tr>
+                              <th style="width:100px"> Type </th>
+                              <th style="width:200px"> Value </th>
+                              <th style="width:100px"> Price </th>
+                              <th style="width:100px"> Direction </th>
+                            </tr>
+                        </thead>
+                        <tbody id ="price_body">
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="empty_price" id="empty_price">There is not Patch </div>
+                    <div class="total_price" id="total_price"></div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div id="openModal" class="modalDialog">
+      <div>
+        <a href="#close" title="Close" class="close">X</a>
+        <div></div>
+        <div class="Modal-porduct-catalog Modal-product">
+        <h1>Images</h1>
+          <ul>
+            <li>T-shirt1</li>
+            <li>T-shirt2</li>
+            <li>T-shirt3</li>
+            <li>T-shirt4</li>
+          </ul>
+        </div>
+        <div class="Modal-product-design Modal-product">
+        <h1>Products</h1>
+          <ul>
+            <li><img src="assets\images\samplesvg.svg" id="img1"><label for="img1">front</label></li>
+            <li><img src="assets\images\samplesvg.svg" ><label for="img1">front</label></li>
+            <li><img src="assets\images\samplesvg.svg" ><label for="img2">front</label></li>
+            <li><img src="assets\images\samplesvg.svg" ><label for="img3">front</label></li>
+            <li><img src="assets\images\samplesvg.svg" ><label for="img4">front</label></li>
+          </ul>
+        </div>
+        <div class="Modal-product-color Modal-product">
+          <div class="Modal-product-color-image">
+            <object data="assets\images\samplesvg.svg" type="image/svg+xml" id="svg_image_id"></object>
+            <div><span></span></div>
+          </div>
+          <div class="Modal-product-color-picker">
+            <div class="picker-wrapper">
+              <div class="color-picker"></div>
+            </div>
+          </div>
+          <div class="Modal-product-add">
+            <a class="Add-image btn" href="#close">Add image to design</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="openUpload" class="uploadDialog" style="visibility: hidden; opacity:0">
+      <div>
+        <a title="Close" class="close" style="cursor:pointer">X</a>
+        <div id = "uploadPanel" class = "uploadPanel">
+          Drop files or click to upload
+        </div>
+        <div id = "uploadControl" class = "uploadControl">
+            <button id="btnAddImage" class="addText btn" type="submit" style="float: right; margin-top: 460px;">Add Image</button>
+          </div>
+      </div>
+    </div>
+
+    <script src="assets/script/jquery.min.js"></script>
+    <script src="assets/script/jQuery.FileDrop.all.min.js"></script>
+    <script src="assets/script/fabric.js"></script>
+    <script src="assets/script/jquery-ui.js"></script>
+    <script src="assets/script/file.saver.js"></script>
+    <script src="assets/script/fabric.curvedText.js"></script>
+    <script src="assets/script/canvas.toblob.js"></script>
+    <script src="assets/script/jquery.zoom.js"></script>
+    
+    <script type="text/javascript" src="assets/script/script.js"></script>
+    <script type="text/javascript" src="assets/script/simplegallery.min.js"></script>
+    <script type="text/javascript" src="assets/script/handlers.js"></script>
+    <script type="text/javascript" src="assets/script/piklor.js"></script>
+    <script type="text/javascript" src="assets/script/palette-color-picker.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $('#zoomView').zoom();
+        $('.kineticjs-content').simplegallery({
+            galltime : 400,
+            gallcontent: '.gallery-content',
+            gallthumbnail: '.thumbnail',
+            gallthumb: '.thumb'
+        });
+  
+  // Advanced exacmple
+  $('.letter-style .color input').paletteColorPicker({
+    // Color in { key: value } format
+    colors: [
+      {"#E91E63": "#E91E63"},
+      {"#1abc9c": "#1abc9c"},
+      {"#2ecc71": "#2ecc71"},
+      {"#3498db": "#3498db"},
+      {"#16a085": "#16a085"},
+      {"#27ae60": "#27ae60"},
+      {"#2980b9": "#2980b9"},
+      {"#8e44ad": "#8e44ad"},
+      {"#2c3e50": "#2c3e50"},
+      {"#f1c40f": "#f1c40f"},
+      {"#e67e22": "#e67e22"},
+      {"#ecf0f1": "#ecf0f1"},
+      {"#95a5a6": "#95a5a6"},
+      {"#C2185B": "#C2185B"},
+      {"#F8BBD0": "#F8BBD0"},
+      // 
+      {"#774489": "#774489"},
+      {"#894468": "#894468"},
+      {"#466454": "#466454"},
+      {"#534489": "#534489"},
+      {"#7904F5": "#7904F5"},
+      {"#04F51E": "#04F51E"},
+      {"#040CF5": "#040CF5"},
+      {"#e74c3c": "#e74c3c"}
+      
+      
+    ],
+    // Add custom class to the picker
+    custom_class: 'double',
+    // Force the position of picker's bubble
+    position: 'downside', // default -> 'upside'
+    // Where is inserted the color picker's button, related to the input
+    insert: 'after', // default -> 'before'
+    // Don't add clear_btn
+    clear_btn: 'last', // null -> without clear button, default -> 'first'
+    // Timeout for the picker's fade out in ms
+    timeout: 1000, // default -> 2000
+    // Forces closin all bubbles that are open before opening the current one
+    close_all_but_this: false, // default is false
+    // Sets the input's background color to the selected one on click
+    // seems that some users find this useful ;)
+    set_background: false, // default is false
+
+    // Events
+    // Callback on bubbl show
+    onbeforeshow_callback: function( what ) {
+      console.log(what);
+    },
+
+    // Callback on change value
+    onchange_callback: function( clicked_color ) {
+
+      $('.letter-style .color input').val(clicked_color).trigger('change');
+    }
+    
+   });
+    $('.letter-style .letter-border input').paletteColorPicker({
+    // Color in { key: value } format
+    colors: [
+      {"#E91E63": "#E91E63"},
+      {"#1abc9c": "#1abc9c"},
+      {"#2ecc71": "#2ecc71"},
+      {"#3498db": "#3498db"},
+      {"#16a085": "#16a085"},
+      {"#27ae60": "#27ae60"},
+      {"#2980b9": "#2980b9"},
+      {"#8e44ad": "#8e44ad"},
+      {"#2c3e50": "#2c3e50"},
+      {"#f1c40f": "#f1c40f"},
+      {"#e67e22": "#e67e22"},
+      {"#ecf0f1": "#ecf0f1"},
+      {"#95a5a6": "#95a5a6"},
+      {"#C2185B": "#C2185B"},
+      {"#F8BBD0": "#F8BBD0"},
+      //
+      {"#774489": "#774489"},
+      {"#894468": "#894468"},
+      {"#466454": "#466454"},
+      {"#534489": "#534489"},
+      {"#7904F5": "#7904F5"},
+      {"#04F51E": "#04F51E"},
+      {"#040CF5": "#040CF5"},
+      {"#e74c3c": "#e74c3c"}
+     
+    ],
+    // Add custom class to the picker
+    custom_class: 'double',
+    // Force the position of picker's bubble
+    position: 'downside', // default -> 'upside'
+    // Where is inserted the color picker's button, related to the input
+    insert: 'after', // default -> 'before'
+    // Don't add clear_btn
+    clear_btn: 'last', // null -> without clear button, default -> 'first'
+    // Timeout for the picker's fade out in ms
+    timeout: 1000, // default -> 2000
+    // Forces closin all bubbles that are open before opening the current one
+    close_all_but_this: false, // default is false
+    // Sets the input's background color to the selected one on click
+    // seems that some users find this useful ;)
+    set_background: true, // default is false
+
+    // Events
+    // Callback on bubbl show
+    onbeforeshow_callback: function( what ) {
+      console.log(what);
+    },
+
+    // Callback on change value
+    onchange_callback: function( clicked_color ) {
+      $('.letter-style .letter-border input').val(clicked_color).trigger('change');
+    }
+ 
+});
+     $('.letter-style .letter-innerborder input').paletteColorPicker({
+    // Color in { key: value } format
+    colors: [
+      {"#E91E63": "#E91E63"},
+      {"#1abc9c": "#1abc9c"},
+      {"#2ecc71": "#2ecc71"},
+      {"#3498db": "#3498db"},
+      {"#16a085": "#16a085"},
+      {"#27ae60": "#27ae60"},
+      {"#2980b9": "#2980b9"},
+      {"#8e44ad": "#8e44ad"},
+      {"#2c3e50": "#2c3e50"},
+      {"#f1c40f": "#f1c40f"},
+      {"#e67e22": "#e67e22"},
+      {"#ecf0f1": "#ecf0f1"},
+      {"#95a5a6": "#95a5a6"},
+      {"#C2185B": "#C2185B"},
+      {"#F8BBD0": "#F8BBD0"},
+      //
+      {"#774489": "#774489"},
+      {"#894468": "#894468"},
+      {"#466454": "#466454"},
+      {"#534489": "#534489"},
+      {"#7904F5": "#7904F5"},
+      {"#04F51E": "#04F51E"},
+      {"#040CF5": "#040CF5"},
+      {"#e74c3c": "#e74c3c"}
+    ],
+    // Add custom class to the picker
+    custom_class: 'double',
+    // Force the position of picker's bubble
+    position: 'downside', // default -> 'upside'
+    // Where is inserted the color picker's button, related to the input
+    insert: 'after', // default -> 'before'
+    // Don't add clear_btn
+    clear_btn: 'last', // null -> without clear button, default -> 'first'
+    // Timeout for the picker's fade out in ms
+    timeout: 1000, // default -> 2000
+    // Forces closin all bubbles that are open before opening the current one
+    close_all_but_this: false, // default is false
+    // Sets the input's background color to the selected one on click
+    // seems that some users find this useful ;)
+    set_background: false, // default is false
+
+    // Events
+    // Callback on bubbl show
+    onbeforeshow_callback: function( what ) {
+      console.log(what);
+    },
+
+    // Callback on change value
+    onchange_callback: function( clicked_color ) {
+      $('.letter-style .letter-innerborder input').val(clicked_color).trigger('change');
+    }
+    });
+    });
+
+  $('.EditTextPane .color input').paletteColorPicker({
+    // Color in { key: value } format
+    colors: [
+      {"#E91E63": "#E91E63"},
+      {"#1abc9c": "#1abc9c"},
+      {"#2ecc71": "#2ecc71"},
+      {"#3498db": "#3498db"},
+      {"#16a085": "#16a085"},
+      {"#27ae60": "#27ae60"},
+      {"#2980b9": "#2980b9"},
+      {"#8e44ad": "#8e44ad"},
+      {"#2c3e50": "#2c3e50"},
+      {"#f1c40f": "#f1c40f"},
+      {"#e67e22": "#e67e22"},
+      {"#ecf0f1": "#ecf0f1"},
+      {"#95a5a6": "#95a5a6"},
+      {"#C2185B": "#C2185B"},
+      {"#F8BBD0": "#F8BBD0"},
+      //
+      {"#774489": "#774489"},
+      {"#894468": "#894468"},
+      {"#466454": "#466454"},
+      {"#534489": "#534489"},
+      {"#7904F5": "#7904F5"},
+      {"#04F51E": "#04F51E"},
+      {"#040CF5": "#040CF5"},
+      {"#e74c3c": "#e74c3c"}
+      
+    ],
+    // Add custom class to the picker
+    custom_class: 'double',
+    // Force the position of picker's bubble
+    position: 'downside', // default -> 'upside'
+    // Where is inserted the color picker's button, related to the input
+    insert: 'after', // default -> 'before'
+    // Don't add clear_btn
+    clear_btn: 'last', // null -> without clear button, default -> 'first'
+    // Timeout for the picker's fade out in ms
+    timeout: 1000, // default -> 2000
+    // Forces closin all bubbles that are open before opening the current one
+    close_all_but_this: false, // default is false
+    // Sets the input's background color to the selected one on click
+    // seems that some users find this useful ;)
+    set_background: false, // default is false
+
+    // Events
+    // Callback on bubbl show
+    onbeforeshow_callback: function( what ) {
+      console.log(what);
+    },
+
+    // Callback on change value
+    onchange_callback: function( clicked_color ) {
+      $('.EditTextPane .color input').val(clicked_color).trigger('change');
+    }
+    
+   });
+
+  $('.EditTextPane .border-textedit input').paletteColorPicker({
+    // Color in { key: value } format
+    colors: [
+      {"#E91E63": "#E91E63"},
+      {"#1abc9c": "#1abc9c"},
+      {"#2ecc71": "#2ecc71"},
+      {"#3498db": "#3498db"},
+      {"#16a085": "#16a085"},
+      {"#27ae60": "#27ae60"},
+      {"#2980b9": "#2980b9"},
+      {"#8e44ad": "#8e44ad"},
+      {"#2c3e50": "#2c3e50"},
+      {"#f1c40f": "#f1c40f"},
+      {"#e67e22": "#e67e22"},
+      {"#ecf0f1": "#ecf0f1"},
+      {"#95a5a6": "#95a5a6"},
+      {"#C2185B": "#C2185B"},
+      {"#F8BBD0": "#F8BBD0"},
+      //
+      {"#774489": "#774489"},
+      {"#894468": "#894468"},
+      {"#466454": "#466454"},
+      {"#534489": "#534489"},
+      {"#7904F5": "#7904F5"},
+      {"#04F51E": "#04F51E"},
+      {"#040CF5": "#040CF5"},
+      {"#e74c3c": "#e74c3c"}
+      
+    ],
+    // Add custom class to the picker
+    custom_class: 'double',
+    // Force the position of picker's bubble
+    position: 'downside', // default -> 'upside'
+    // Where is inserted the color picker's button, related to the input
+    insert: 'after', // default -> 'before'
+    // Don't add clear_btn
+    clear_btn: 'last', // null -> without clear button, default -> 'first'
+    // Timeout for the picker's fade out in ms
+    timeout: 1000, // default -> 2000
+    // Forces closin all bubbles that are open before opening the current one
+    close_all_but_this: false, // default is false
+    // Sets the input's background color to the selected one on click
+    // seems that some users find this useful ;)
+    set_background: false, // default is false
+
+    // Events
+    // Callback on bubbl show
+    onbeforeshow_callback: function( what ) {
+      console.log(what);
+    },
+
+    // Callback on change value
+    onchange_callback: function( clicked_color ) {
+      $('.EditTextPane .border-textedit input').val(clicked_color).trigger('change');
+    }
+    
+   });
+
+  $('.EditTextPane .innerborder-textedit input').paletteColorPicker({
+    // Color in { key: value } format
+    colors: [
+      {"#E91E63": "#E91E63"},
+      {"#1abc9c": "#1abc9c"},
+      {"#2ecc71": "#2ecc71"},
+      {"#3498db": "#3498db"},
+      {"#16a085": "#16a085"},
+      {"#27ae60": "#27ae60"},
+      {"#2980b9": "#2980b9"},
+      {"#8e44ad": "#8e44ad"},
+      {"#2c3e50": "#2c3e50"},
+      {"#f1c40f": "#f1c40f"},
+      {"#e67e22": "#e67e22"},
+      {"#ecf0f1": "#ecf0f1"},
+      {"#95a5a6": "#95a5a6"},
+      {"#C2185B": "#C2185B"},
+      {"#F8BBD0": "#F8BBD0"},
+      //
+      {"#774489": "#774489"},
+      {"#894468": "#894468"},
+      {"#466454": "#466454"},
+      {"#534489": "#534489"},
+      {"#7904F5": "#7904F5"},
+      {"#04F51E": "#04F51E"},
+      {"#040CF5": "#040CF5"},
+      {"#e74c3c": "#e74c3c"}
+      
+    ],
+    // Add custom class to the picker
+    custom_class: 'double',
+    // Force the position of picker's bubble
+    position: 'downside', // default -> 'upside'
+    // Where is inserted the color picker's button, related to the input
+    insert: 'after', // default -> 'before'
+    // Don't add clear_btn
+    clear_btn: 'last', // null -> without clear button, default -> 'first'
+    // Timeout for the picker's fade out in ms
+    timeout: 1000, // default -> 2000
+    // Forces closin all bubbles that are open before opening the current one
+    close_all_but_this: false, // default is false
+    // Sets the input's background color to the selected one on click
+    // seems that some users find this useful ;)
+    set_background: false, // default is false
+
+    // Events
+    // Callback on bubbl show
+    onbeforeshow_callback: function( what ) {
+      console.log(what);
+    },
+
+    // Callback on change value
+    onchange_callback: function( clicked_color ) {
+      $('.EditTextPane .innerborder-textedit input').val(clicked_color).trigger('change');
+    }
+    
+   });
+  $('.editimagepane_svg_colorpicker').paletteColorPicker({
+    // Color in { key: value } format
+    colors: [
+      {"#E91E63": "#E91E63"},
+      {"#1abc9c": "#1abc9c"},
+      {"#2ecc71": "#2ecc71"},
+      {"#3498db": "#3498db"},
+      {"#16a085": "#16a085"},
+      {"#27ae60": "#27ae60"},
+      {"#2980b9": "#2980b9"},
+      {"#8e44ad": "#8e44ad"},
+      {"#2c3e50": "#2c3e50"},
+      {"#f1c40f": "#f1c40f"},
+      {"#e67e22": "#e67e22"},
+      {"#ecf0f1": "#ecf0f1"},
+      {"#95a5a6": "#95a5a6"},
+      {"#C2185B": "#C2185B"},
+      {"#F8BBD0": "#F8BBD0"},
+      //
+      {"#774489": "#774489"},
+      {"#894468": "#894468"},
+      {"#466454": "#466454"},
+      {"#534489": "#534489"},
+      {"#7904F5": "#7904F5"},
+      {"#04F51E": "#04F51E"},
+      {"#040CF5": "#040CF5"},
+      {"#e74c3c": "#e74c3c"}
+      
+    ],
+    // Add custom class to the picker
+    custom_class: 'double',
+    // Force the position of picker's bubble
+    position: 'downside', // default -> 'upside'
+    // Where is inserted the color picker's button, related to the input
+    insert: 'after', // default -> 'before'
+    // Don't add clear_btn
+    clear_btn: 'last', // null -> without clear button, default -> 'first'
+    // Timeout for the picker's fade out in ms
+    timeout: 1000, // default -> 2000
+    // Forces closin all bubbles that are open before opening the current one
+    close_all_but_this: false, // default is false
+    // Sets the input's background color to the selected one on click
+    // seems that some users find this useful ;)
+    set_background: false, // default is false
+
+    // Events
+    // Callback on bubbl show
+    onbeforeshow_callback: function( what ) {
+      console.log(what);
+    },
+    // Callback on change value
+    onchange_callback: function( clicked_color ) {
+      $('.editimagepane_svg_colorpicker').val(clicked_color).trigger('change');
+    }
+    
+   });
+</script>
+</body>
+</html>
